@@ -1,12 +1,12 @@
-body { margin: 0; padding: 20px; background: #fff; color: #000; font-family: "Courier New", Courier, monospace; font-size: 9px; }
+body { margin: 0; padding: 20px; min-height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; background: #fff; color: #000; font-family: "Courier New", Courier, monospace; font-size: 9px; }
 h1 { font-size: 18px; margin: 0 0 6px; }
 p { margin: 0 0 10px; }
-.sub { font-size: 12px; }
+.sub { font-size: 18px; font-weight: bold; margin: 0 0 12px; }
 label { display: block; margin: 8px 0 3px; }
 input { display: block; width: 260px; padding: 4px; font: inherit; border: 1px solid #000; border-radius: 3px; }
 button { margin-top: 10px; padding: 4px 18px; font: inherit; background: #fff; border: 1px solid #000; border-radius: 3px; cursor: pointer; }
 .sig { margin-top: 18px; }
 ul { list-style: none; padding: 0; margin: 0; }
 li { margin-bottom: 3px; }
-.foot { margin-top: 18px; }
+.foot { margin-top: auto; padding-top: 40px; text-align: center; }
 a { color: #000; }
