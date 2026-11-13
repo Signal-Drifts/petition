@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cross-Company Petition | Signal Drift</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Cross-Company Petition</h1>
+    <p class="subtitle">A centralized place for everyone to sign, regardless of company affiliations.</p>
+  </header>
+
+  <main>
+    <section class="petition">
+      <h2>The Statement</h2>
+      <p>We, the undersigned, from companies across the industry, stand together in support of open collaboration, shared standards, and progress that transcends individual company boundaries. Our signatures represent a unified voice.</p>
+      <p><em>Edit this text in index.html to match your actual petition.</em></p>
+    </section>
+
+    <section class="sign-form">
+      <h2>Add Your Signature</h2>
+      <p>Sign with your full name, or just initials. Company is optional.</p>
+      <form id="signForm">
+        <label>
+          Full Name or Initials <span class="required">*</span>
+          <input type="text" id="name" name="name" required placeholder="John Doe or J.D.">
+        </label>
+        <label>
+          Company (optional)
+          <input type="text" id="company" name="company" placeholder="SpaceX, xAI, etc.">
+        </label>
+        <button type="submit">Sign the Petition</button>
+      </form>
+      <p class="note">Submitting will open a GitHub issue in a new tab so you can confirm your signature. Make sure you're signed in to GitHub.</p>
+    </section>
+
+    <section class="signatures">
+      <h2>Signatures So Far <span id="count">(loading...)</span></h2>
+      <div id="signaturesList">
+        <p>Loading signatures...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hosted on GitHub Pages by <a href="https://github.com/Signal-Drifts">Signal Drift</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
