@@ -21,9 +21,14 @@ async function loadSignatures() {
   const listEl = document.getElementById('signaturesList');
   const countEl = document.getElementById('count');
   try {
-    const res = await fetch(`https://api.github.com/repos/${REPO}/issues?labels=${LABEL}&state=all&per_page=100`);
-    if (!res.ok) throw new Error('Failed to load');
-    const issues = await res.json();
+    let issues = [];
+    for (let page = 1; ; page++) {
+      const res = await fetch(`https://api.github.com/repos/${REPO}/issues?labels=${LABEL}&state=all&per_page=100&page=${page}`);
+      if (!res.ok) throw new Error('Failed to load');
+      const batch = await res.json();
+      issues = issues.concat(batch);
+      if (batch.length < 100) break;
+    }
     // Filter out pull requests if any
     const sigs = issues.filter(i => !i.pull_request);
     countEl.textContent = `(${sigs.length})`;
