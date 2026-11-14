@@ -10,10 +10,11 @@
   <h1>Cross-Company Petition</h1>
   <p class="sub">Reinstate Jensen Huang as NVIDIA CEO</p>
   <form id="signForm">
-    <label for="name">Full Name or Initials:</label>
-    <input type="text" id="name" name="name" required>
-    <label for="company">Company (optional):</label>
-    <input type="text" id="company" name="company">
+    <div class="row">
+      <div class="field"><label for="name">Full Name or Initials:</label><input type="text" id="name" name="name" required></div>
+      <div class="field"><label for="email">Email (optional):</label><input type="email" id="email" name="email"></div>
+      <div class="field"><label for="company">Company (optional):</label><input type="text" id="company" name="company"></div>
+    </div>
     <button type="submit">Sign the Petition</button>
   </form>
   <p class="sig">Signatures: <span id="count"></span></p>
